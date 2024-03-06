@@ -1,0 +1,26 @@
+const LENDING_POOL_PROXY_ADDRESS = '0xB702cE183b4E1Faa574834715E5D4a6378D0eEd3';
+const LENDING_POOL_IMPLEMENTATION_ADDRESS = '0xC01a7AD7Fb8a085a3cc16be8eaA10302c78a1783';
+
+const A_TOKEN_ADDRESSES: string[] = [
+    '0xe7334Ad0e325139329E747cF2Fc24538dD564987', //ironUSDC
+    '0x02CD18c03b5b3f250d2B29C87949CDAB4Ee11488', //ironUSDT
+    '0x9c29a8eC901DBec4fFf165cD57D4f9E03D4838f7', //ironETH
+];
+
+const VARIABLE_DEBT_TOKEN_ADDRESSES: string[] = [
+    '0xe5415Fa763489C813694D7A79d133F0A7363310C', //vUSDC
+    '0xBcE07537DF8AD5519C1d65e902e10aA48AF83d88', //vUSDT
+    '0x06D38c309d1dC541a23b0025B35d163c25754288', //vETH
+];
+
+const adapter = {
+  adapter: {
+      fetch: {
+        lending_pool_proxy: LENDING_POOL_PROXY_ADDRESS, lending_pool_implementation: LENDING_POOL_IMPLEMENTATION_ADDRESS,
+        a_tokens: A_TOKEN_ADDRESSES, v_tokens: VARIABLE_DEBT_TOKEN_ADDRESSES
+    },
+      start:  3929674, // where n is the startingBlock like 1695458888
+    }
+};
+
+export default adapter;
